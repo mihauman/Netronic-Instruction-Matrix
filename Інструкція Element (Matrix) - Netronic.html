@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<!-- saved from url=(0078)file:///C:/Users/User1/Downloads/Telegram%20Desktop/netronic_matrix_guide.html -->
+<html lang="uk"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Інструкція Element (Matrix) - Netronic</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 15mm;
+        }
+        
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            padding: 15mm;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #0DBD8B;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #0DBD8B;
+            margin-bottom: 5px;
+        }
+        
+        h1 {
+            font-size: 22px;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .subtitle {
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+        
+        .server-info {
+            background: #e8f8f5;
+            padding: 12px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #0DBD8B;
+        }
+        
+        .server-info strong {
+            color: #0DBD8B;
+        }
+        
+        .step {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            page-break-inside: avoid;
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: #3498db;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .step-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .step-content {
+            margin-left: 40px;
+        }
+        
+        .step-content ul {
+            margin-left: 20px;
+        }
+        
+        .step-content li {
+            margin: 8px 0;
+        }
+        
+        .platform-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 10px 0;
+        }
+        
+        .platform-badge {
+            display: inline-block;
+            padding: 8px 15px;
+            background: #3498db;
+            color: white;
+            border-radius: 20px;
+            font-size: 13px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        
+        .platform-badge:hover {
+            background: #2980b9;
+        }
+        
+        .screenshot {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 15px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border: 1px solid #e0e0e0;
+        }
+        
+        .screenshot-small {
+            max-width: 250px;
+        }
+        
+        .screenshot-row {
+            display: flex;
+            gap: 15px;
+            margin: 15px 0;
+            flex-wrap: wrap;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        
+        .warning::before {
+            content: "⚠️ ";
+            font-weight: bold;
+        }
+        
+        .info-box {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        
+        .info-box::before {
+            content: "ℹ️ ";
+        }
+        
+        .mobile-section {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #2196F3;
+            page-break-inside: avoid;
+        }
+        
+        .mobile-title {
+            font-weight: bold;
+            color: #1976D2;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        .mobile-title::before {
+            content: "📱 ";
+        }
+        
+        .footer {
+            margin-top: 25px;
+            padding-top: 15px;
+            border-top: 2px solid #ecf0f1;
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 13px;
+        }
+        
+        .support-box {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        .support-box strong {
+            color: #dc3545;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">NETRONIC</div>
+            <h1>Інструкція: Вхід в месенджер Element (Matrix)</h1>
+            <div class="subtitle">Для співробітників Netronic</div>
+        </div>
+
+        <div class="server-info">
+            <strong>🌐 Сервер (homeserver):</strong> <code>https://matrix.netronic.net/</code><br>
+            <strong>🔑 Логіни та паролі</strong> видає системний адміністратор
+        </div>
+
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">1</span>
+                Завантаження та встановлення Element
+            </div>
+            <div class="step-content">
+                <ul>
+                    <li>Перейдіть на <strong>element.io/download</strong></li>
+                    <li>Оберіть версію для вашої ОС:</li>
+                </ul>
+                <div class="platform-links">
+                    <a href="https://packages.element.io/desktop/install/win32/x64/Element%20Setup.exe" class="platform-badge" target="_blank">💻 Windows</a>
+                    <a href="https://packages.element.io/desktop/install/macos/Element.dmg" class="platform-badge" target="_blank">🍎 macOS</a>
+                    <a href="https://element.io/download#linux" class="platform-badge" target="_blank">🐧 Linux</a>
+                    <a href="https://play.google.com/store/apps/details?id=io.element.android.x" class="platform-badge" target="_blank">🤖 Android</a>
+                    <a href="https://apps.apple.com/app/id1631335820" class="platform-badge" target="_blank">📱 iOS</a>
+                </div>
+                <ul>
+                    <li>Встановіть застосунок</li>
+                </ul>
+                
+                <img src="./Інструкція Element (Matrix) - Netronic_files/photo_2025-10-07_12-23-53.jpg" alt="Вітальний екран Element" class="screenshot">
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">2</span>
+                Налаштування сервера Netronic
+            </div>
+            <div class="step-content">
+                <ul>
+                    <li>Запустіть Element та натисніть <strong>"Увійти"</strong></li>
+                    <li>Оберіть <strong>"Змінити"</strong> → введіть адресу сервера: <code>https://matrix.netronic.net/</code></li>
+                </ul>
+                
+                <div class="screenshot-row">
+                    <img src="./Інструкція Element (Matrix) - Netronic_files/photo_2025-10-07_12-14-29.jpg" alt="Екран входу" class="screenshot" style="max-width: 48%;">
+                    <img src="./Інструкція Element (Matrix) - Netronic_files/photo_2025-10-07_12-14-35.jpg" alt="Налаштування сервера" class="screenshot" style="max-width: 48%;">
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">3</span>
+                Вхід в систему
+            </div>
+            <div class="step-content">
+                <ul>
+                    <li>Натисніть <strong>"Продовжити"</strong></li>
+                    <li>Введіть <strong>логін і пароль</strong>, надані адміністратором</li>
+                    <li>Натисніть <strong>"Увійти"</strong></li>
+                </ul>
+                
+                <img src="./Інструкція Element (Matrix) - Netronic_files/photo_2025-10-07_12-14-45.jpg" alt="Головний екран" class="screenshot">
+                
+                <div class="warning">
+                    При першому вході обов'язково змініть тимчасовий пароль в налаштуваннях!
+                </div>
+                
+                <ul>
+                    <li>Перейдіть в <strong>Налаштування</strong> (іконка шестерні внизу ліворуч)</li>
+                    <li>Оберіть <strong>"Усі налаштування"</strong></li>
+                    <li>Знайдіть розділ <strong>"Обліковий запис"</strong></li>
+                    <li>Встановіть новий безпечний пароль</li>
+                </ul>
+                
+                <div class="screenshot-row">
+                    <img src="./Інструкція Element (Matrix) - Netronic_files/photo_2025-10-07_12-14-49.jpg" alt="Меню налаштувань" class="screenshot-small">
+                    <img src="./Інструкція Element (Matrix) - Netronic_files/photo_2025-10-07_12-14-54.jpg" alt="Зміна паролю" class="screenshot-small">
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">4</span>
+                Налаштування профілю
+            </div>
+            <div class="step-content">
+                <ul>
+                    <li>У розділі <strong>"Профіль"</strong> додайте своє ім'я та фото</li>
+                    <li>Це допоможе колегам впізнавати вас у чатах</li>
+                </ul>
+                
+                <img src="./Інструкція Element (Matrix) - Netronic_files/photo_2025-10-07_12-15-02.jpg" alt="Налаштування профілю" class="screenshot">
+            </div>
+        </div>
+
+        <div class="mobile-section">
+            <div class="mobile-title">Вхід з мобільного телефону</div>
+            
+            <ol style="margin-left: 20px;">
+                <li>Відкрийте додаток Element і натисніть <strong>"Вхід вручну"</strong></li>
+                <li>Натисніть <strong>"Змінити поставщика облікового запису"</strong></li>
+                <li>Введіть в поле: <code>matrix.netronic.net</code></li>
+                <li>Натисніть <strong>"Продовжити"</strong></li>
+                <li>Введіть ваш <strong>логін та пароль</strong></li>
+                <li>При необхідності використайте <strong>recovery key</strong> для відновлення доступу</li>
+            </ol>
+            
+            <div class="screenshot-row">
+                <img src="./Інструкція Element (Matrix) - Netronic_files/1.jpg" alt="Мобільний вхід" class="screenshot-small">
+                <img src="./Інструкція Element (Matrix) - Netronic_files/2.jpg" alt="Зміна сервера" class="screenshot-small">
+                <img src="./Інструкція Element (Matrix) - Netronic_files/3.jpg" alt="Введення сервера" class="screenshot-small">
+            </div>
+            
+            <div class="screenshot-row">
+                <img src="./Інструкція Element (Matrix) - Netronic_files/4.jpg" alt="Підтвердження" class="screenshot-small">
+                <img src="./Інструкція Element (Matrix) - Netronic_files/5.jpg" alt="Логін і пароль" class="screenshot-small">
+                <img src="./Інструкція Element (Matrix) - Netronic_files/6.jpg" alt="Recovery key" class="screenshot-small">
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">5</span>
+                Доступ до кімнат
+            </div>
+            <div class="step-content">
+                <div class="info-box">
+                    Для приєднання до кімнат використовуйте запрошення або пошук у клієнті
+                </div>
+                <ul>
+                    <li>Для особистих чатів шукайте колег за логіном у форматі:<br>
+                    <code>@username:netronic.net</code></li>
+                    <li>Для групових кімнат очікуйте на запрошення від адміністратора</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">6</span>
+                Відновлення доступу
+            </div>
+            <div class="step-content">
+                <ul>
+                    <li>Якщо забули пароль — зверніться до системного адміністратора</li>
+                    <li>Адміністратор допоможе скинути пароль та відновити доступ</li>
+                    <li>Збережіть <strong>recovery key</strong> у безпечному місці для майбутнього відновлення</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="support-box">
+            <strong>📞 Підтримка:</strong><br>
+            Системний адміністратор (IT) — видає логіни/паролі, допомагає з доступом та налаштуваннями
+        </div>
+
+        <div class="footer">
+            © Netronic | Інструкція з використання Element (Matrix)
+        </div>
+    </div>
+
+    <script>
+        // Convert uploaded images to base64 - images will be embedded when user provides them
+        const images = {
+            1: 'data:image/png;base64,...', // Welcome screen
+            2: 'data:image/png;base64,...', // Login screen
+            3: 'data:image/png;base64,...', // Server setup
+            4: 'data:image/png;base64,...', // Main screen
+            5: 'data:image/png;base64,...', // Settings menu
+            6: 'data:image/png;base64,...', // Password change
+            7: 'data:image/png;base64,...', // Profile settings
+            8: 'data:image/png;base64,...', // Mobile welcome
+            9: 'data:image/png;base64,...', // Mobile server change
+            10: 'data:image/png;base64,...', // Mobile server input
+            11: 'data:image/png;base64,...', // Mobile confirmation
+            12: 'data:image/png;base64,...', // Mobile login
+            13: 'data:image/png;base64,...'  // Mobile recovery
+        };
+    </script>
+
+</body></html>
