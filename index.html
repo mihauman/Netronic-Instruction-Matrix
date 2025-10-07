@@ -136,16 +136,22 @@
             border: 1px solid #e0e0e0;
         }
         
-        .screenshot-small {
-            max-width: 250px;
-        }
+       .screenshot-small {
+    max-width: 30%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
+}
         
-        .screenshot-row {
-            display: flex;
-            gap: 15px;
-            margin: 15px 0;
-            flex-wrap: wrap;
-        }
+       .screenshot-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+    margin: 15px 0;
+    flex-wrap: wrap; /* дозволяє переноситись на мобільних */
+}
         
         .warning {
             background: #fff3cd;
@@ -220,6 +226,12 @@
             font-family: 'Courier New', monospace;
             font-size: 13px;
         }
+
+@media (max-width: 768px) {
+    .screenshot-small {
+        max-width: 80%;
+    }
+}
         
         @media print {
             body {
