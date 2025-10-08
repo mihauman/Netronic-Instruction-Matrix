@@ -136,7 +136,7 @@
             border: 1px solid #e0e0e0;
         }
         
-      .screenshot-small { max-width: 50% !important;  height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border: 1px solid #e0e0e0; } 
+      .screenshot-small { max-width: 50%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border: 1px solid #e0e0e0; } 
 .screenshot-row { display: flex; justify-content: center; align-items: flex-start; gap: 15px; margin: 15px 0; flex-wrap: wrap; /* дозволяє переноситись на мобільних */ }
         
         .warning {
@@ -172,7 +172,10 @@
             border-left: 4px solid #2196F3;
             page-break-inside: avoid;
         }
-        
+        .large-screenshots .screenshot-small {
+    width: 90% !important; /* максимально займатимуть 90% ширини рядка */
+    height: auto !important;
+}
         .mobile-title {
             font-weight: bold;
             color: #1976D2;
@@ -312,10 +315,10 @@
                     <li>Встановіть новий безпечний пароль</li>
                 </ul>
                 
-                <div class="screenshot-row">
-                    <img src="./Інструкція Element (Matrix) - Netronic_files/photo_2025-10-07_12-14-49.jpg" alt="Меню налаштувань" class="screenshot-small">
-                    <img src="./Інструкція Element (Matrix) - Netronic_files/photo_2025-10-07_12-14-54.jpg" alt="Зміна паролю" class="screenshot-small">
-                </div>
+                <div class="screenshot-row large-screenshots">
+    <img src="./Інструкція Element (Matrix) - Netronic_files/photo_2025-10-07_12-14-49.jpg" alt="Меню налаштувань" class="screenshot-small">
+    <img src="./Інструкція Element (Matrix) - Netronic_files/photo_2025-10-07_12-14-54.jpg" alt="Зміна паролю" class="screenshot-small">
+</div>
             </div>
         </div>
 
