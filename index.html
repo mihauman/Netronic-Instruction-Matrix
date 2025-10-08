@@ -136,8 +136,22 @@
             border: 1px solid #e0e0e0;
         }
         
-      .screenshot-small { max-width: 50%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border: 1px solid #e0e0e0; } 
-.screenshot-row { display: flex; justify-content: center; align-items: flex-start; gap: 15px; margin: 15px 0; flex-wrap: wrap; /* дозволяє переноситись на мобільних */ }
+       .screenshot-small {
+    max-width: 30%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
+}
+        
+       .screenshot-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+    margin: 15px 0;
+    flex-wrap: wrap; /* дозволяє переноситись на мобільних */
+}
         
         .warning {
             background: #fff3cd;
@@ -172,18 +186,7 @@
             border-left: 4px solid #2196F3;
             page-break-inside: avoid;
         }
-.large-screenshots .screenshot-small {
-    width: 100% !important;  /* займає всю ширину контейнера */
-    height: auto !important;
-    margin-bottom: 15px;
-}
-
-/* Головний рядок скріншотів для будь-яких screenshot */
-.screenshot-row > .screenshot {
-    width: 100% !important;  /* перекриває inline max-width */
-    height: auto !important;
-    margin-bottom: 15px;
-}
+        
         .mobile-title {
             font-weight: bold;
             color: #1976D2;
@@ -291,10 +294,9 @@
                     <li>Оберіть <strong>"Змінити"</strong> → введіть адресу сервера: <code>https://matrix.netronic.net/</code></li>
                 </ul>
                 
-                <div class="screenshot-row large-screenshots">
-            <img src="./Інструкція Element (Matrix) - Netronic_files/photo_2025-10-07_12-14-29.jpg" alt="Екран входу" class="screenshot-small">
-            <img src="./Інструкція Element (Matrix) - Netronic_files/photo_2025-10-07_12-14-35.jpg" alt="Налаштування сервера" class="screenshot-small">
-        </div>
+                <div class="screenshot-row">
+                    <img src="./Інструкція Element (Matrix) - Netronic_files/photo_2025-10-07_12-14-29.jpg" alt="Екран входу" class="screenshot" style="max-width: 100%;">
+                    <img src="./Інструкція Element (Matrix) - Netronic_files/photo_2025-10-07_12-14-35.jpg" alt="Налаштування сервера" class="screenshot" style="max-width: 100%;">
                 </div>
             </div>
         </div>
@@ -324,10 +326,10 @@
                     <li>Встановіть новий безпечний пароль</li>
                 </ul>
                 
-                <div class="screenshot-row large-screenshots">
-    <img src="./Інструкція Element (Matrix) - Netronic_files/photo_2025-10-07_12-14-49.jpg" alt="Меню налаштувань" class="screenshot-small">
-    <img src="./Інструкція Element (Matrix) - Netronic_files/photo_2025-10-07_12-14-54.jpg" alt="Зміна паролю" class="screenshot-small">
-</div>
+                <div class="screenshot-row">
+                    <img src="./Інструкція Element (Matrix) - Netronic_files/photo_2025-10-07_12-14-49.jpg" alt="Меню налаштувань" class="screenshot" style="max-width: 100%;">
+                    <img src="./Інструкція Element (Matrix) - Netronic_files/photo_2025-10-07_12-14-54.jpg" alt="Зміна паролю" class="screenshot" style="max-width: 100%;">
+                </div>
             </div>
         </div>
 
